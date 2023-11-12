@@ -1,0 +1,108 @@
+
+PerspectiveCamera {
+    center 0.2 0.55 0.8
+    direction -0.3 -0.45 -1
+    up 0 1 0
+    angle 32
+    width 1500
+    height 1200
+}
+
+Lights {
+    numLights 2
+    DirectionalLight {
+        direction -0.5 -0.5 -1
+        color 0.5 0.5 0.5 
+    }
+    PointLight {
+      position 50 60 70
+      color 12 12 12
+    }
+}
+
+Background {
+    color 0 0 0 
+}
+
+Materials {
+    numMaterials 7
+    Material { 
+        color 0.8 0.9 1
+        type 1 0 0
+    }
+    Material { 
+        color 0.4 0.4 0.75 
+        type 1 0 0
+    }
+    Material { 
+        color 0.75 0.75 0.75 
+        type 1 0 0
+    }
+    Material { 
+        color 0.35 1 0.35
+        type 1 0 0
+    }
+    Material {
+        color 0 0 0
+        emission 7 7 7
+        type 1 0 0
+    }
+    Material { 
+        color 1 0.75 0.75
+        type 1 0 0
+    }
+    Material { 
+        color 1 0.95 0.95
+        type 0 0 1
+        refr 1.4
+    }
+}
+
+Group {
+    numObjects 9
+    MaterialIndex 0
+    Plane {
+        normal 1 0.01 0
+        offset -0.5
+    }
+    MaterialIndex 1
+    Plane {
+        normal -1 0.01 0
+        offset -0.4
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 0 1
+        offset -0.7
+    }
+    MaterialIndex 3
+    Plane {
+        normal 0 0 -1
+        offset -2
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 1 0
+        offset 0
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 -1 0
+        offset -1
+    }
+    MaterialIndex 4
+    Sphere {
+    center 0 1.95 0
+        radius 1
+    }
+    MaterialIndex 4
+    Sphere {
+    center 0.04 0.1 -0.3
+        radius 0.03
+    }
+    MaterialIndex 6
+    TriangleMesh {
+        obj_file mesh/bunny_200.obj
+    }
+}
+

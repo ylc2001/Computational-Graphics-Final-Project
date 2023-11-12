@@ -1,0 +1,147 @@
+
+PerspectiveCamera {
+    center 80 30 250
+    direction -0.15 0.05 -1
+    up 0 1 0
+    angle 38
+    width 2000
+    height 1500
+    focal 7
+    aperture 0
+}
+
+Lights {
+    numLights 2
+    DirectionalLight {
+        direction -0.5 -0.5 -1
+        color 0.5 0.5 0.5 
+    }
+    PointLight {
+      position 50 60 70
+      color 1 1 1
+    }
+}
+
+Background {
+    color 0 0 0 
+}
+
+Materials {
+    numMaterials 9
+    Material { 
+        color 0.6 0.9 0.6
+        type 1 0 0
+    }
+    Material { 
+        color 0.4 0.4 0.75 
+        type 1 0 0
+    }
+    Material { 
+        color 0.75 0.75 0.75 
+        type 1 0 0
+    }
+    Material { 
+        color 0.35 1 0.35
+        type 1 0 0
+    }
+    Material {
+        color 1 1 1
+        type 0 1 0
+    }
+    Material {
+        color 1 1 1
+        type 0 0 1
+        refr 1.5
+    }
+    Material {
+        color 0 0 0
+        emission 15 15 15
+        type 1 0 0
+    }
+    Material {
+        color 0.5 0.5 0
+        type 1 0 0
+    }
+    Material {
+      diffuseColor 0.5 0.6 1
+      type 0.7 0.3 0
+      texture texture/vase.png
+	}
+}
+
+Group {
+    numObjects 12
+    MaterialIndex 0
+    Plane {
+        normal 1 0 0
+        offset 0
+    }
+    MaterialIndex 1
+    Plane {
+        normal -1 0 0
+        offset -100 
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 0 1
+        offset -70
+    }
+    MaterialIndex 3
+    Plane {
+        normal 0 0 -1
+        offset -250
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 1 0
+        offset -10
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 -1 0
+        offset -85
+    }
+    MaterialIndex 4
+    Sphere {
+    center 32 20 55
+        radius 20 
+    }
+    MaterialIndex 5
+    Sphere {
+    center 73 20 20
+        radius 16.5
+    }
+    MaterialIndex 6
+    Sphere {
+    center 50 684.5 55
+        radius 600
+    }
+    MaterialIndex 6
+    Sphere {
+    center 50 45 449.3
+        radius 200
+    }
+    MaterialIndex 7
+    Sphere {
+    center 18 66 90
+        radius 14
+    }
+    MaterialIndex 8
+    Transform {
+        Translate 65 12 100
+        Scale 7 7 7
+        RevSurface {
+            profile BezierCurve {
+                controls
+                    [ -1.5 3 0 ]
+                    [ 0 2 0 ]
+                    [ 0 1 0 ]
+                    [ -4 1 0 ]
+                    [ 0 -1 0 ]
+                    [ -2.5 -2 0 ]
+                    [ -1 -3 0 ]
+            }
+        }
+    }
+}
+

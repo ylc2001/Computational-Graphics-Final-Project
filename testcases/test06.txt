@@ -1,0 +1,97 @@
+
+PerspectiveCamera {
+    center 3.2 -0.5 7.2
+    direction -3 0.2 -8
+    up 0 1 0
+    angle 30
+    width 1500
+    height 1500
+    focal 7
+    aperture 0.15
+}
+
+Lights {
+    numLights 1
+    PointLight {
+        position 0.0 5 5
+        color 0.9 0.9 0.9 
+    }
+}
+
+Background {
+    color 0 0 0 
+}
+
+Materials {
+    numMaterials 7
+    Material { 
+        type 1 0 0
+        texture texture/venus.png
+    }
+    Material { 
+        type 1 0 0
+        texture texture/world_cloud.jpg
+    }
+    Material { 
+        type 1 0 0
+        texture texture/mars.jpg
+    }
+    Material { 
+        type 1 0 0
+        texture texture/jupyter.png
+    }
+    Material { 
+        diffuseColor 1 1 1 
+	    specularColor 1 1 1
+	    shininess 20
+        }
+    Material { 
+        diffuseColor 0.2 0.2 1
+        emission 10 9 8.2
+        }
+    Material { 
+        type 1 0 0
+        texture texture/sun.jpg
+        emission 0.3 0.3 0.3
+    }
+}
+
+Group {
+    numObjects 7
+    MaterialIndex 0
+    Sphere {
+	center 0 -1.3 2.5
+        radius 0.7
+    }
+    MaterialIndex 1
+    Sphere {
+	center 0 -1 0
+        radius 1 
+    }
+    MaterialIndex 2
+    Sphere {
+	center 0.6 -1.34 -1.5
+        radius 0.54
+    }
+    MaterialIndex 3
+    Sphere {
+	center -1 4 -10
+        radius 6
+    }
+    MaterialIndex 4
+    Plane {
+	normal 0 1 0
+        offset -2
+    }
+    MaterialIndex 5
+    Sphere {
+	center 4 4 4
+        radius 2
+    }
+    MaterialIndex 5
+    Sphere {
+	center 4 16 -4
+        radius 3
+    }
+}
+
